@@ -3,9 +3,9 @@ C:\Projects\SudokuSolverAPI\SudokoSolver\bin\Debug\SudokoSolver.exe
 C:\Projects\SudokuSolverAPI\SudokoSolver\bin\Debug\SudokoSolver.pdb
 C:\Projects\SudokuSolverAPI\SudokoSolver\obj\Debug\SudokoSolver.csproj.AssemblyReference.cache
 C:\Projects\SudokuSolverAPI\SudokoSolver\obj\Debug\SudokoSolver.csproj.SuggestedBindingRedirects.cache
-C:\Projects\SudokuSolverAPI\SudokoSolver\obj\Debug\SudokoSolver.Form1.resources
 C:\Projects\SudokuSolverAPI\SudokoSolver\obj\Debug\SudokoSolver.Properties.Resources.resources
 C:\Projects\SudokuSolverAPI\SudokoSolver\obj\Debug\SudokoSolver.csproj.GenerateResource.cache
 C:\Projects\SudokuSolverAPI\SudokoSolver\obj\Debug\SudokoSolver.csproj.CoreCompileInputs.cache
 C:\Projects\SudokuSolverAPI\SudokoSolver\obj\Debug\SudokoSolver.exe
 C:\Projects\SudokuSolverAPI\SudokoSolver\obj\Debug\SudokoSolver.pdb
+C:\Projects\SudokuSolverAPI\SudokoSolver\obj\Debug\SudokoSolver.SudokoSolver.resources

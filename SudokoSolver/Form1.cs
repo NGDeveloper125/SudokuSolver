@@ -25,6 +25,7 @@ namespace SudokoSolver
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            this.BackColor = Color.CornflowerBlue;
             TextBoxesList = new List<TextBox>();
 
             this.Height = 500;
@@ -55,6 +56,7 @@ namespace SudokoSolver
             button1.Font = new Font("cambria", 15);
             button1.Text = "Solve!";
             button1.AutoSize = true;
+            button1.BackColor = Color.Azure;
 
             int textBoxTop = 110;
             int textBotLeft = 55;
