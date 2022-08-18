@@ -4,8 +4,10 @@ using System.Xml.Schema;
 
 namespace SudokuSolverAPI.Models
 {
+    
     public class Solution
     {
+       
         private char[,] ReceivedBoard { get; set; }
 
         public string _return;
@@ -35,16 +37,7 @@ namespace SudokuSolverAPI.Models
                 StringBuilder _builder = new StringBuilder();
                 foreach (var VARIABLE in ReceivedBoard)
                 {
-                    if (i < 9)
-                    {
-                        _builder.Append(VARIABLE);
-                        i++;
-                    }
-                    else
-                    {
-                        _builder.Append($"/ {VARIABLE}");
-                        i = 1;
-                    }
+                    _builder.Append(VARIABLE);
                 }
                 _return = _builder.ToString();
             }
