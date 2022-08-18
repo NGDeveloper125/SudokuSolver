@@ -14,9 +14,8 @@ namespace SudokoSolver
 {
     public partial class SudokoSolver : Form
     {
-        bool _SolveClean = false;
+        bool _SolveClean;
         private List<TextBox> TextBoxesList;
-        private Dictionary<string, int> textBoxDictionary;
 
         public SudokoSolver()
         {
@@ -25,6 +24,9 @@ namespace SudokoSolver
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
+            #region Form SetUP
+
             this.BackColor = Color.CornflowerBlue;
             TextBoxesList = new List<TextBox>();
 
@@ -98,9 +100,11 @@ namespace SudokoSolver
                     r++;
                 }
             }
-           
+            #endregion
+
         }
 
+        //Calling the api with 30 sec timeout
         private async Task<string> AccessAPI(string data)
         {
             string _url = $"https://localhost:7200/api/Solution/{data}";
@@ -120,6 +124,7 @@ namespace SudokoSolver
            return "error";
         }
 
+        //Clean the textboxes
         private void CleanBoxes()
         {
             foreach (var VARIABLE in TextBoxesList)
@@ -127,6 +132,8 @@ namespace SudokoSolver
                 VARIABLE.Text = String.Empty;
             }
         }
+        
+        //Running the solve logic / running CleanBoxes method
         private void button1_Click(object sender, EventArgs e)
         {
             if (_SolveClean)
@@ -159,6 +166,7 @@ namespace SudokoSolver
 
         }
 
+        //Executing the AccessAPI from a new thread
         private void SendData(string data)
         {
             Thread th = new Thread(() =>
@@ -175,11 +183,11 @@ namespace SudokoSolver
             th.Start();
         }
 
+        //Receiving data from thread and filling the textboxes
         private void FilldSolution(string dataFromApi)
         {
             char[] _chars = dataFromApi.ToCharArray();
             int i = 0;
-            int t = 0;
             foreach (var m in _chars)
             {
                 TextBoxesList[i].Text = m.ToString();
